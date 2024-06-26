@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PDF Manipulation</title>
+  </head>
+  <body>
+    <h2>PDF Manipulation</h2>
+    <form action="/process" method="post" enctype="multipart/form-data">
+      <label for="files">Select PDF Files:</label><br />
+      <input
+        type="file"
+        name="files"
+        id="files"
+        multiple
+        required
+      /><br /><br />
+
+      <input type="radio" id="split" name="operation" value="split" required />
+      <label for="split">Split</label><br />
+
+      <input type="radio" id="merge" name="operation" value="merge" required />
+      <label for="merge">Merge</label><br /><br />
+
+      <label for="start">Start Page (For Splitting):</label><br />
+      <input type="text" id="start" name="start" /><br /><br />
+
+      <label for="end">End Page (For Splitting):</label><br />
+      <input type="text" id="end" name="end" /><br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
